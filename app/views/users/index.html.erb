@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Attendees</h1>
+<%#= select("property", "type_id", @users.collect {|user| [user.category, user.id ] }, {prompt: 'Filter by attendance'})%>
+<%= form_tag users_path, :method => 'get' do %>
+<%= collection_select :user, :category, User.unique_by_category, :category, :category, prompt: true %>
+<%= submit_tag 'Filter'%>
+<% end %>
+<div class='users' id="users">
+  <% @users.each do |user| %>
+  <div class='user-details'>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+    </div>
+  <% end %>
+</div>
+
+<%#= link_to "Export users as spreadsheet", users_path(format: "xlsx") %>
+<%= link_to 'Export', 
+    users_path(request.parameters.merge({format: :xlsx})), 
+    download: 'projects.xlsx' %>
+<%= link_to "New user", new_user_path %>

@@ -1,0 +1,13 @@
+# app/views/users/index.xlsx.axlsx
+
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Users") do |sheet|
+  # this is the head row of your spreadsheet
+  sheet.add_row %w(first_name last_name email phone_number)
+  
+  # each user is a row on your spreadsheet
+  @users.each do |user|
+    sheet.add_row [user.first_name, user.last_name, user.email, user.phone]
+  end
+end
