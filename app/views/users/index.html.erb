@@ -3,7 +3,7 @@
 <h1>Attendees</h1>
 <%#= select("property", "type_id", @users.collect {|user| [user.category, user.id ] }, {prompt: 'Filter by attendance'})%>
 <%= form_tag users_path, :method => 'get' do %>
-<%= collection_select :user, :category, User.unique_by_category, :category, :category, prompt: true %>
+<%= collection_select :user, :category, User.unique_by_category, :category, :category, prompt: 'Filter by attandance' %>
 <%= submit_tag 'Filter'%>
 <% end %>
 <div class='users' id="users">
@@ -11,14 +11,16 @@
   <div class='user-details'>
     <%= render user %>
     <p>
-      <%= link_to "Show this user", user %>
+      <%= link_to "See guest's details", user %>
     </p>
     </div>
   <% end %>
 </div>
 
 <%#= link_to "Export users as spreadsheet", users_path(format: "xlsx") %>
-<%= link_to 'Export', 
+<div class='buttons'>
+<%= link_to 'Export to excel', 
     users_path(request.parameters.merge({format: :xlsx})), 
-    download: 'projects.xlsx' %>
-<%= link_to "New user", new_user_path %>
+    download: 'Guests.xlsx' %>
+<%= link_to "New attendance registration", new_user_path %>
+</div>
