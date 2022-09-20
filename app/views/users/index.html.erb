@@ -6,18 +6,30 @@
 <%= collection_select :user, :category, User.unique_by_category, :category, :category, prompt: 'Filter by attandance' %>
 <%= submit_tag 'Filter'%>
 <% end %>
-<div class='users' id="users">
-  <% @users.each do |user| %>
-  <div class='user-details'>
-    <%= render user %>
-    <p>
-      <%= link_to "See guest's details", user %>
-    </p>
-    </div>
-  <% end %>
-</div>
-
 <%#= link_to "Export users as spreadsheet", users_path(format: "xlsx") %>
+  <table>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Phone number</th>
+      <th>E-mail</th>
+      <th>Attendance status</th>
+      <th>Comment</th>
+      <th>Guest Details</th>
+    </tr>
+<% @users.each do |user| %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.phone %></td>
+      <td><%= user.email %></td>
+      <td><%= user.category %></td>
+      <td><%= user.comment %></td>
+      <td><%= link_to 'See guest details', user %></td>
+    </tr>
+<%end%>
+  </table>
+
 <div class='buttons'>
 <%= link_to 'Export to excel', 
     users_path(request.parameters.merge({format: :xlsx})), 
