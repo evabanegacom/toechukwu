@@ -14,20 +14,42 @@
  *= require_self
  */
 
+ *{
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ }
+
  .users {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 2rem;
   text-decoration: none;
  }
 
- .user-details {
+ .filter {
   display: flex;
   flex-direction: column;
-  flex-basis:250px;
-  margin-top: 30px;
-  box-shadow: 0 0 10px 5px;
+  justify-content: center;
   text-align: center;
+ }
+
+ .filter select {
+  margin-top: 1rem;
+ }
+
+ .filter select {
+  padding: 10px;
+  border-radius: 10px;
+ }
+
+ .filter-button{
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
  }
 
 .buttons {
@@ -68,13 +90,29 @@
 
  .form__container {
    display: flex;
-   border: 1px solid red;
    flex-direction: column;
    align-items: center;
    justify-content: center;
+   background: rgba(0,0,0,0.7)url('https://res.cloudinary.com/spetsnaz/image/upload/v1663661056/toechukwu_lln0yy.jpg');
+   background-blend-mode: darken;
  }
 
+ nav {
+  border: 1px solid red;
+  background: #003049;
+  color: #fff;
+  padding: 20px 0;
+ }
 
+ .form__container h1 {
+  color: #fff;
+ }
+
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 td, th {
   border: 1px solid #dddddd;
   text-align: left;

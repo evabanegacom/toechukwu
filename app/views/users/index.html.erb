@@ -1,12 +1,14 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Attendees</h1>
+<div class='filter'>
+  <h1>Attendees</h1>
 <%#= select("property", "type_id", @users.collect {|user| [user.category, user.id ] }, {prompt: 'Filter by attendance'})%>
-<%= form_tag users_path, :method => 'get' do %>
-<%= collection_select :user, :category, User.unique_by_category, :category, :category, prompt: 'Filter by attandance' %>
-<%= submit_tag 'Filter'%>
-<% end %>
+  <%= form_tag users_path, :method => 'get' do %>
+  <%= collection_select :user, :category, User.unique_by_category, :category, :category, prompt: 'Filter by attandance' %>
+  <%= submit_tag 'Filter', class: 'filter-button'%>
+  <% end %>
+</div>
 <%#= link_to "Export users as spreadsheet", users_path(format: "xlsx") %>
+<div class='users'>
   <table>
     <tr>
       <th>First name</th>
@@ -15,7 +17,6 @@
       <th>E-mail</th>
       <th>Attendance status</th>
       <th>Comment</th>
-      <th>Guest Details</th>
     </tr>
 <% @users.each do |user| %>
     <tr>
@@ -25,11 +26,10 @@
       <td><%= user.email %></td>
       <td><%= user.category %></td>
       <td><%= user.comment %></td>
-      <td><%= link_to 'See guest details', user %></td>
     </tr>
 <%end%>
   </table>
-
+</div>
 <div class='buttons'>
 <%= link_to 'Export to excel', 
     users_path(request.parameters.merge({format: :xlsx})), 
