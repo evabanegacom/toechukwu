@@ -27,8 +27,6 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-gem 'simple_form'
-
 gem 'rubyzip'
 gem 'axlsx'
 gem 'axlsx_rails'

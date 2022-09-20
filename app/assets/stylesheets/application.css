@@ -33,6 +33,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
  }
 
  .filter select {
@@ -109,6 +110,7 @@
  .form__container h1 {
   color: #fff;
   margin-top: 2rem;
+  text-align: center;
  }
 
 table {

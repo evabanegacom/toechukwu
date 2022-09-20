@@ -29,26 +29,3 @@
     <%= user.phone %>
   </p>
 </div>
-
-<div class='first-input'>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
-  </div>
-
-<div class='form-div'>
-    <%= form.label :category, style: "display: block" %>
-    <div class='checkbox-container'>
-    <div class='checkbox-div'>
-    <%= label_tag(:rsvp, "RSVP") %>
-    <%= form.radio_button :category, 'RSVP', class: 'checkbox'%>
-    </div>
-    <div class='checkbox-div'>
-    <%= label_tag(:undecided, "undecided") %>
-    <%= form.radio_button :category, 'undecided', class: 'checkbox' %>
-    </div>
-    <div class='checkbox-div'>
-    <%= label_tag(:not_coming, "not coming") %>
-    <%= form.radio_button :category, 'not coming', class: 'checkbox' %>
-    </div>
-    </div>
-  </div>
