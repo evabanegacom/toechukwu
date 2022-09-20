@@ -93,20 +93,22 @@
    flex-direction: column;
    align-items: center;
    overflow: hidden;
+   padding-bottom: 5rem;
    justify-content: center;
    background: rgba(0,0,0,0.7)url('https://res.cloudinary.com/spetsnaz/image/upload/v1663661056/toechukwu_lln0yy.jpg');
    background-blend-mode: darken;
  }
 
  nav {
-  border: 1px solid red;
   background: #003049;
   color: #fff;
   padding: 20px 0;
+  text-align: center;
  }
 
  .form__container h1 {
   color: #fff;
+  margin-top: 2rem;
  }
 
 table {
@@ -134,6 +136,7 @@ tr:nth-child(even) {
    justify-content: center;
    align-items: center;
    width: 500px;
+   margin-top: 2rem;
    box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
    min-height: 100px;
  }
@@ -173,6 +176,20 @@ tr:nth-child(even) {
    margin-top: 10px;
  }
 
+ .couple {
+  font-weight: 700;
+  font-size: 20pt;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+ }
+
  @media screen and (max-width: 550px){
   .form{
     width: 100%;
@@ -189,3 +206,13 @@ tr:nth-child(even) {
     width: 270px;
    }
  }
+
+ @keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+
+  100% {
+    background-position: 500%;
+  }
+}
