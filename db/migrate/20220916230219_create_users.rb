@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :last_name
       t.string :email
       t.string :comment, default: 'Enter a comment'
-      t.string :category, default: "Choose an invite status"
+      t.string :category
       t.string :phone
 
       t.timestamps

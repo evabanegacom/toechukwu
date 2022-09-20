@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_16_230219) do
     t.string "last_name"
     t.string "email"
     t.string "comment", default: "Enter a comment"
-    t.string "category", default: "Choose an invite status"
+    t.string "category"
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
