@@ -100,6 +100,24 @@
    background-blend-mode: darken;
  }
 
+ .image-div {
+  margin-top: 2rem;
+ }
+
+ .wedding-image {
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;
+ }
+
+ .wedding-details {
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+  width: 800px;
+  font-size: 16pt;
+ }
+
  nav {
   background: #003049;
   color: #fff;
@@ -190,6 +208,12 @@ tr:nth-child(even) {
   animation: animate 3s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
+ }
+
+ @media screen and (max-width: 799px){
+  .wedding-details {
+    width: 100%;
+  }
  }
 
  @media screen and (max-width: 550px){
