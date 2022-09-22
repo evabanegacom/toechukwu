@@ -97,7 +97,7 @@
   padding-bottom: 5rem;
   justify-content: center;
   khtml-opacity: 0.5;
-  background: rgba(0,0,0,0.7)url('https://res.cloudinary.com/spetsnaz/image/upload/v1663661056/toechukwu_lln0yy.jpg');
+  background: rgba(0,0,0, .7)url('https://res.cloudinary.com/spetsnaz/image/upload/v1663661056/toechukwu_lln0yy.jpg');
   background-blend-mode: darken;
 }
 
