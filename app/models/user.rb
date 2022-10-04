@@ -3,6 +3,13 @@ class User < ApplicationRecord
         where('category LIKE ?', "#{search}")
     end
 
+    before_validation :strip_blanks
+
+    def strip_blanks
+        self.first_name = self.first_name.strip
+        self.last_name = self.last_name.strip
+      end
+
     scope :unique_by_category, lambda { select('DISTINCT(category)') }
 
     validates :first_name, presence: true

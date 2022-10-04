@@ -17,7 +17,7 @@
       <th>E-mail</th>
       <th>Attendance status</th>
       <th>Comment</th>
-      <th>Delete</th>
+      <%# <th>Delete</th> %>
     </tr>
 <% @users.each do |user| %>
     <tr>
@@ -27,7 +27,7 @@
       <td><%= user.email %></td>
       <td><%= user.category %></td>
       <td><%= user.comment %></td>
-      <%= button_to "Delete this response", user, method: :delete %>
+      <%#= button_to "Delete this response", user, method: :delete %>
     </tr>
 <%end%>
   </table>
