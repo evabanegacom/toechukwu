@@ -1,6 +1,6 @@
-# fly.toml file generated for toeandkoma on 2022-09-20T13:13:50Z
+# fly.toml file generated for toeandkuma on 2022-09-25T02:14:37Z
 
-app = "toeandkoma"
+app = "toeandkuma"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []

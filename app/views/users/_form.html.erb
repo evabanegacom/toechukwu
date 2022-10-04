@@ -34,11 +34,11 @@
   </div>
 
   <div class='form-div'>
-    <%= form.label :Response, style: "display: block" %>
+    <%= form.label :Response, 'Response(RSVP)', style: "display: block" %>
     <div class='checkbox-container'>
     <div class='checkbox-div'>
-    <%= label_tag(:rsvp, "RSVP") %>
-    <%= form.radio_button :category, 'RSVP', class: 'checkbox'%>
+    <%= label_tag(:accept, "Accept") %>
+    <%= form.radio_button :category, 'Accept', class: 'checkbox'%>
     </div>
     <div class='checkbox-div'>
     <%= label_tag(:undecided, "undecided") %>
